@@ -1,0 +1,9 @@
+<p><div>
+	<%= link_to @link.title, @link.url %><br>
+	<% unless @link.body.empty? %>
+		<%= @link.body %>
+	<% end %><br>
+Submitted <%= distance_of_time_in_words(@link.created_at, Time.now) %> ago by <%= @link.user.username %>.<br>
+</div><p>
+
+<!-- ADD SUBS AND COMMENTS -->

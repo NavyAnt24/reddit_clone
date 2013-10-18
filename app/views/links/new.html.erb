@@ -1,0 +1,26 @@
+<h2>Create a new link</h2>
+
+<form action = "<%= links_url %>" method= "post">
+	<input type= "hidden"
+					name="authenticity_token"
+					value="<%= form_authenticity_token %>">
+
+	<label for="link_title">Title:</label>
+	<input 	type="text"
+					name="link[title]"
+					id="link_title">
+	<br>
+
+	<label for="link_url">URL:</label>
+	<input 	type="text"
+					name="link[url]"
+					id="link_url">
+	<br>
+
+	<label for="link_body">Body (optional):</label>
+	<textarea name="link[body]" id="link_body"></textarea>
+
+	<br>
+
+	<input type="submit" value = "Submit Link" >
+</form>
