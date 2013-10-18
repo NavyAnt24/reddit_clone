@@ -1,3 +1,9 @@
 <h1>Welcome to your user page, <%= @user.username %>!</h1>
 
 <%= link_to "Add a link!", new_link_url %>
+<br><br>
+<% @user.links.each do |link| %>
+ <%= link_to link.title, link.url %>
+ Submitted <%= distance_of_time_in_words(link.created_at, Time.now) %> ago
+ <br>
+<% end %>
